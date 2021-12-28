@@ -50,13 +50,14 @@ export default {
         return true
       }
     }
-
+    // tell vee-validate that we want it to use this object as the validation’s schema.
     useForm({
       validationSchema: validations
     })
 
     const { value: email, errorMessage: emailError } = useField('email')
     const { value: password, errorMessage: passwordError } = useField('password')
+    // using JavaScript object destructuring to extract the value and errorMessage out of the password field object
 
     return {
       onSubmit,
