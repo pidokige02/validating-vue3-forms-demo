@@ -59,6 +59,7 @@ export default {
     const { value: email, errorMessage: emailError, handleChange } = useField('email')
     const { value: password, errorMessage: passwordError } = useField('password')
     // using JavaScript object destructuring to extract the value and errorMessage out of the password field object
+    // It seems like 'email' and 'password' should match with email and password within validations.
 
     return {
       onSubmit,
